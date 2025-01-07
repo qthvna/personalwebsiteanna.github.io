@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Anna Website</title>
+    <link rel="stylesheet" href="workStyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<header>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Anna</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="home.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="aboutMe.html">About Me</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="work.html">Work Experience</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="education.html">Education</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="home.html">Home</a>
+                <a href="aboutMe.html">About Me</a>
+                <a href="skills.html">Skills</a>
+                <a href="work.html">Work Experience</a>
+                <a href="education.html">Education</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+    <section>
+        <div class="main-container">
+            
+            <div class="slider-container">
+                <div class="slider-images">
+                  <div class="slider-img">
+                    <img src="Image/sogo.png" alt="1" />
+                    <h1>SOGO</h1>
+                    <div class="details">
+                      <h2>SOGO</h2>
+                      
+                    </div>
+                  </div>
+                  <div class="slider-img">
+                    <img src="Image/mamasab.png" alt="2" />
+                    <h1>MAMASAB</h1>
+                    <div class="details">
+                      <h2>MAMASAB</h2>
+                      
+                    </div>
+                  </div>
+                  <div class="slider-img active">
+                    <img src="Image/work experience.png" alt="3" />
+                    <h1>WORK EXPERIENCE</h1>
+                    <div class="details">
+                      <h2>WORK EXPERIENCE</h2>
+                    </div>
+                  </div>
+                  <div class="slider-img">
+                    <img src="image\Chear Motor.jpg" alt="4" />
+                    <h1>CHEAR MOTOR</h1>
+                    <div class="details">
+                      <h2>CHEAR MOTOR</h2>
+                      
+                    </div>
+                  </div>
+                  <div class="slider-img">
+                    <img src="image\MBDK.png" alt="5" />
+                    <h1>MBDK</h1>
+                    <div class="details">
+                      <h2>MBDK</h2>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="workBox">
+              <div class="workContainer">
+                <div class="workTitle">
+                  <h2>SOGO</h2>
+                </div>
+                <div class="workDesc">
+                  My experience working at SOGO as a promoter for women's shoes in 2020 was both rewarding and dynamic, where I had the opportunity to engage with customers, showcase the latest shoe trends, and help them find the perfect fit, all while enhancing my communication and sales skills.
+                </div>
+              </div>
+              <div class="workContainer">
+                <div class="workTitle">
+                  <h2>MAMASAB</h2>
+                </div>
+                <div class="workDesc">
+                  During my time as a part-timer at MAMASAB bakery, I gained valuable experience in customer service, assisting with the preparation of baked goods, and ensuring a positive and efficient experience for customers, all while working in a fast-paced, team-oriented environment.
+                </div>
+              </div>
+              <div class="workContainer">
+                <div class="workTitle">
+                  <h2>CHEAR MOTOR</h2>
+                </div>
+                <div class="workDesc">
+                  My experience working at CHEAR MOTOR as a administration & accountant in 2024, where I had the effective office management and accounting involve several key tasks. Maintaining an organized filing system and answering phone calls professionally ensures smooth communication and easy access to documents. To enhance efficiency, monitor daily operations and streamline processes.
+                </div>
+              </div>
+              <div class="workContainer">
+                <div class="workTitle">
+                  <h2>MBDK</h2>
+                </div>
+                <div class="workDesc">
+                   My experience during industrial training at MBDK as a student practical for 2 months, where I was surrounded by an efficient, multifaceted learning environment that included a range of operational and administrative duties. This hands-on experience allows me to apply concepts learned in my coursework to real-world situations, enhancing me understanding of how information management  systems operate in practice.                                                                                                                                                          
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+    </script>
+    <script src="jQuery.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+</body>
+<footer class="footer">
+    &copy;<span id="year"></span> <span>Anna Website. All rights reserved.</span>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</html>
