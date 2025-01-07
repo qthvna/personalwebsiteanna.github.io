@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Anna Website</title>
+    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<header>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Anna</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="home.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="aboutMe.html">About Me</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="work.html">Work Experience</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="education.html">Education</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="home.html">Home</a>
+                <a href="aboutMe.html">About Me</a>
+                <a href="skills.html">Skills</a>
+                <a href="work.html">Work Experience</a>
+                <a href="education.html">Education</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                <img src="image/na.png" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Anna</span></h1>
+                <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Welcome to My <span>Personal Website</span></h2>
+                <div class="intro" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">Hi, I’m Anna, and I’m excited to share a little about myself through this platform. This website serves as a digital extension of my personal and professional journey. Here, you’ll find information about my skills, work experience, education, and the projects I’ve worked on.</div>
+                <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                    <a href="https://www.instagram.com/aaannaaa.__" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100008508515988" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@taenaav?_r=1&_d=dkhb3li94eehlf&sec_uid=MS4wLjABAAAABYgQ2OnFumdEBALfTez3izcjo3ZktTsUsEFo27qxawHM2jvEtSDrCQbaq_y80agl&share_author_id=6521260020964917250&sharer_language=en&source=h5_t&u_code=cld5cgb6f191ck&ug_btm=b8727,b0&sec_user_id=MS4wLjABAAAABYgQ2OnFumdEBALfTez3izcjo3ZktTsUsEFo27qxawHM2jvEtSDrCQbaq_y80agl&utm_source=whatsapp&social_share_type=5&utm_campaign=client_share&utm_medium=ios&tt_from=whatsapp&user_id=6521260020964917250&enable_checksum=1&share_link_id=5417009D-F1D4-447C-97A9-261A5747AC3C&share_app_id=1180" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://x.com/taenaav?s=11&t=5t-cziQ6JRcWGGwdc2NoGg" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+        
+                <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+                    <a href="mailto:annaqolbie12@gmail.com">
+                        <button>Mail Me!</button>
+                    </a>
+                </div>
+            </div>
+            <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+                <a href="image\RESUME QOLBIE.pdf" download="Anna_Resume.pdf">
+                    <button>My Resume</button>
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+    </script>
+</body>
+<footer class="footer">
+    &copy;<span id="year"></span> <span>Anna Website. All rights reserved.</span>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</html>
