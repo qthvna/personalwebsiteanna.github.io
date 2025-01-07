@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Anna Website</title>
+    <link rel="stylesheet" href="familyStyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<header>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>About Me</h3>
+            <i class="fa-solid fa-xmark sidebar-close" onclick="toggleSidebar()"></i>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="family.html">Family</a></li>
+            <li><a href="friends.html">Friends</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+        </ul>
+    </div>
+    <i class="fa-solid fa-bars sidebar-open" onclick="toggleSidebar()"></i>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Anna</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="home.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="aboutMe.html">About Me</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="work.html">Work Experience</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="education.html">Education</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="home.html">Home</a>
+                <a href="aboutMe.html">About Me</a>
+                <a href="skills.html">Skills</a>
+                <a href="work.html">Work Experience</a>
+                <a href="education.html">Education</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+    <section>
+        <div class="main-container">
+            <img src="image\Ayah.png" alt="my family">
+        </div>
+        <div class="main-container">
+            <img src="image/family.png" alt="my family">
+        </div>
+        <div class="main-container">
+            <img src="image\Siblings.png" alt="my family">
+        </div>
+    </section>
+    <br>
+<video width="320" height="240" controls class="center-video">
+    <source src="image\Girl December.MOV" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
+   <br>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const sidebarOpenBtn = document.querySelector('.sidebar-open');
+    
+            // Toggle sidebar visibility
+            sidebar.classList.toggle('active');
+    
+            // Hide the open button when sidebar is active, show it when closed
+            if (sidebar.classList.contains('active')) {
+                sidebarOpenBtn.style.display = 'none';
+            } else {
+                sidebarOpenBtn.style.display = 'block';
+            }
+        }
+
+
+    </script>
+</body>
+<footer class="footer">
+    &copy;<span id="year"></span> <span>Anna Website. All rights reserved.</span>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</html>
