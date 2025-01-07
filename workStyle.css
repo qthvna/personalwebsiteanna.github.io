@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    flex: 1;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(254, 215, 173));
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-left: -55px;
+}
+
+.logo span {
+    color: rgb(109, 67, 0);
+    text-shadow: 0 0 10px rgb(109, 67, 0);
+}
+
+.hamburg, .cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: black;
+    font-size: 2rem;
+    display: none;
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transform: 0.3s linear;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(109, 67, 0);
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .contact-btn {
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(109, 67, 0);
+    transition: 0.2s linear;
+}
+
+.nav-container .contact-btn a {
+    color: white;
+    transition: 0.3s linear;
+}
+
+.nav-container .contact-btn:hover,
+.nav-container .contact-btn:hover a {
+    background-color: rgb(109, 67, 0);
+    color: white;
+}
+
+.nav-container .links a:hover {
+    color: rgb(109, 67, 0);
+}
+
+.dropdown {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(40%) blur(3px);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a {
+    color: white;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+    background-color: rgb(109, 67, 0);
+}
+
+section {
+    flex: 1; /* Ensures the section takes up the remaining space */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center;
+}
+
+.main-container .content {
+    color: black;
+    width: 40%;
+    min-height: 100px;
+}
+
+.content h1 {
+    font-size: clamp(1rem, 2rem + 5vw, 3rem);
+}
+
+.content h1 span {
+    color: rgb(109, 67, 0);
+    text-shadow: 0 0 10px rgb(109, 67, 0);
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words {
+    0%, 33% {
+        content: "Developer";
+    }
+    34%, 66% {
+        content: "Designer";
+    }
+    67%, 100% {
+        content: "Youtuber";
+    }
+}
+
+.content p {
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+.content button {
+    width: 40%;
+    height: 6vh;
+    margin: 30px;
+    background-color: rgb(109, 67, 0);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 100%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover {
+    scale: 1.1;
+    color: rgb(109, 67, 0);
+    border: 2px solid rgb(109, 67, 0);
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px rgb(109, 67, 0);
+}
+  
+@media (max-width: 884px) {
+    body {
+        overflow-y: visible;
+    }
+
+    nav .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburg, .cancel {
+        display: block;
+    }
+
+    .main-container .content {
+        width: 80%;
+    }
+
+    .social-links i {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .cancel {
+        color: white;
+    }
+
+    .main-container .image {
+        width: 80%;
+        margin-bottom: 0px;
+    }
+}
+
+.footer {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    background: white;
+    color: rgb(109, 67, 0);
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 884px) {
+    .footer {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+}
+
+.slider-container{
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.9); /* Scale everything to 90% */
+    transform-origin: center; /* Ensure scaling is centered */
+  }
+  .slider-images{
+    display: flex;
+    align-items: center;
+    gap: 21px;
+  }
+  .slider-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  .slider-img{
+    width: 150px; /* Reduce width proportionally */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.7s ease;
+  }
+  .slider-images .slider-img:first-child, .slider-images .slider-img:nth-child(5){
+    height: 432px;
+  }
+  .slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(4){
+    height: 504px;
+  }
+  .slider-images .slider-img:nth-child(3){
+    height: 598px;
+  }
+  h1{
+    font-size: 36px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: rotate(270deg);
+    transition: 0.7s ease;
+  }
+  .details{
+    position: absolute;
+    bottom: 43px;
+    left: 43px;
+  }
+  .details h2{
+    font-size: 23px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 44px;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.7s ease;
+    display: none;
+  }
+  .details p{
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 33px;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.7s ease;
+    display: none;
+  }
+  .slider-img.active{
+    width: 690px !important; /* Reduce active image size */
+    height: 675px !important; /* Adjust active image size */
+  }
+  .slider-img.active h1{
+     display: none;
+  }
+  .slider-img.active .details p, .slider-img.active .details h2{
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.90);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .slider-img {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .slider-img.active .details {
+    position: absolute;
+    align-content: center;
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%); /* Center with transform */
+    text-align: center; /* Center-align text */
+    width: 100%; /* Ensure the text container spans the slide */
+}
+
+.slider-img.active .details h2 {
+    display: block;
+    text-align: center;
+    font-size: 64px; /* Adjust the font size to make it prominent */
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+    margin: 0; /* Remove any default margin */
+    text-transform: uppercase;
+}
+
+.slider-img.active .details p {
+    display: none; /* Hide the paragraph for the active slide */
+}
+
+.workBox {
+    padding: 30px;
+    margin-bottom: 30px;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
+    grid-gap: 20px; /* Space between the containers */
+}
+
+.workContainer {
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    margin: 15px;
+    display: flex; /* Optional: To align items within each container */
+    flex-direction: column; /* Optional: Align content vertically */
+}
+
+.workTitle {
+    color: #fff;
+    background-color: rgb(109, 67, 0);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 0 20px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.workDesc {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), -15px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .workBox {
+        grid-template-columns: 1fr; /* Switch to 1 column on small screens */
+    }
+}
