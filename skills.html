@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Anna Website</title>
+    <link rel="stylesheet" href="skillsStyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+</head>
+<header>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Anna</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="home.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="aboutMe.html">About Me</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="work.html">Work Experience</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="education.html">Education</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="home.html">Home</a>
+                <a href="aboutMe.html">About Me</a>
+                <a href="skills.html">Skills</a>
+                <a href="work.html">Work Experience</a>
+                <a href="education.html">Education</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+    <section>
+        <div class="main-container">
+            <section id="chartBox">
+                <div class="skills">
+                    <div class="SBtitle">
+                        <h2>Technical Skills</h2>
+                    </div>
+            
+                    <div class="skill">
+                        <div class="skill-name">HTML & CSS</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="80"></div>
+                        </div>
+                    </div>
+            
+                    <div class="skill">
+                        <div class="skill-name">Capcut</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="95"></div>
+                        </div>
+                    </div>
+            
+            
+                    <div class="skill">
+                        <div class="skill-name">Canva</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90"></div>
+                        </div>
+                    </div>
+            
+                    <div class="skill">
+                        <div class="skill-name">C++</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="65"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-name">Adobe</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="78"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapperBox">
+                    <div class="wrtitle">
+                        <h2>Professional Skills</h2>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card" data-progress="0.85">
+                          <div class="circle">
+                            <div class="bar"></div>
+                            <div class="box"><span>85%</span></div>
+                          </div>
+                          <div class="text">Creativity</div>
+                        </div>
+                        <div class="card" data-progress="0.90">
+                          <div class="circle">
+                            <div class="bar"></div>
+                            <div class="box"><span>90%</span></div>
+                          </div>
+                          <div class="text">Intergrity</div>
+                        </div>
+                        <div class="card" data-progress="0.88">
+                          <div class="circle">
+                            <div class="bar"></div>
+                            <div class="box"><span>88%</span></div>
+                          </div>
+                          <div class="text">Flexibility</div>
+                        </div>
+                        <div class="card" data-progress="0.80">
+                          <div class="circle">
+                            <div class="bar"></div>
+                            <div class="box"><span>80%</span></div>
+                          </div>
+                          <div class="text">Rationality</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="soft-skills">
+                <h2>Soft Skills</h2>
+                <p class="soft-skills-description">These are the soft skills that I gained during my diploma.</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Skill</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1. Communication</td>
+                                <td>Ability to clearly convey ideas both in writing and speaking.</td>
+                            </tr>
+                            <tr>
+                                <td>2. Problem-solving</td>
+                                <td>Creative and analytical approach to tackling challenges.</td>
+                            </tr>
+                            <tr>
+                                <td>3. Time Management</td>
+                                <td>Ability to prioritize tasks and meet deadlines effectively.</td>
+                            </tr>
+                            <tr>
+                                <td>4. Teamwork</td>
+                                <td>Collaborating efficiently with others to achieve goals.</td>
+                            </tr>
+                            <tr>
+                                <td>5. Adaptability</td>
+                                <td>Quickly adjusting to new situations or learning new skills.</td>
+                            </tr>
+                            <tr>
+                                <td>6. Leadership</td>
+                                <td>Guiding and motivating teams to reach objectives and grow.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.card').each(function() {
+                var progressValue = $(this).data('progress'); // Get the percentage value from the data-progress attribute
+            
+                // Initialize the circle progress bar
+                $(this).find('.bar').circleProgress({
+                value: progressValue,
+                size: 150, // Adjust the size as needed
+                fill: {
+                    gradient: ['rgb(109, 67, 0)', 'rgb(254, 215, 173)']
+                },
+                startAngle: -1.55
+                }).on('circle-animation-progress', function(event, progress, stepValue) {
+                // Update the span text with the current progress value
+                $(this).parent().find("span").text((stepValue * 100).toFixed(0) + "%");
+                });
+            });
+        });
+    </script>
+    <script>
+        $('.skill-per').each(function () {
+            var $this = $(this);
+            var per = $this.attr('per');
+            $this.css("width", per + '%');
+            $({ animatedValue: 0 }).animate({ animatedValue: per }, {
+                duration: 1000,
+                step: function () {
+                    $this.attr('per', Math.floor(this.animatedValue) + '%');
+
+                },
+                complete: function () {
+                    $this.attr('per', Math.floor(this.animatedValue) + '%');
+
+                }
+
+            });
+        });
+    </script>
+</body>
+<footer class="footer">
+    &copy;<span id="year"></span> <span>Anna Website. All rights reserved.</span>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</html>
