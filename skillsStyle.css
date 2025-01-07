@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    flex: 1;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(254, 215, 173));
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-left: -55px;
+}
+
+.logo span {
+    color: rgb(109, 67, 0);
+    text-shadow: 0 0 10px rgb(109, 67, 0);
+}
+
+.hamburg, .cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: black;
+    font-size: 2rem;
+    display: none;
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transform: 0.3s linear;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(109, 67, 0);
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .contact-btn {
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(109, 67, 0);
+    transition: 0.2s linear;
+}
+
+.nav-container .contact-btn a {
+    color: white;
+    transition: 0.3s linear;
+}
+
+.nav-container .contact-btn:hover,
+.nav-container .contact-btn:hover a {
+    background-color: rgb(109, 67, 0);
+    color: white;
+}
+
+.nav-container .links a:hover {
+    color: rgb(109, 67, 0);
+}
+
+.dropdown {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(40%) blur(3px);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a {
+    color: white;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+    background-color: rgb(109, 67, 0);
+}
+
+section {
+    flex: 1; /* Ensures the section takes up the remaining space */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-container {
+    width: 80%;
+	margin-top: 40px;
+    margin-bottom: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: -15px 10px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), -15px 10px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.main-container .content {
+    color: black;
+    width: 40%;
+    min-height: 100px;
+}
+
+.content h1 {
+    font-size: clamp(1rem, 2rem + 5vw, 3rem);
+}
+
+.content h1 span {
+    color: rgb(109, 67, 0);
+    text-shadow: 0 0 10px rgb(109, 67, 0);
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words {
+    0%, 33% {
+        content: "Developer";
+    }
+    34%, 66% {
+        content: "Designer";
+    }
+    67%, 100% {
+        content: "Youtuber";
+    }
+}
+
+.content p {
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+.content button {
+    width: 40%;
+    height: 6vh;
+    margin: 30px;
+    background-color: rgb(109, 67, 0);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 100%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover {
+    scale: 1.1;
+    color: rgb(109, 67, 0);
+    border: 2px solid rgb(109, 67, 0);
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px rgb(109, 67, 0);
+}
+  
+@media (max-width: 884px) {
+    body {
+        overflow-y: visible;
+    }
+
+    nav .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburg, .cancel {
+        display: block;
+    }
+
+    .main-container .content {
+        width: 80%;
+    }
+
+    .social-links i {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .cancel {
+        color: white;
+    }
+
+    .main-container .image {
+        width: 80%;
+        margin-bottom: 0px;
+    }
+}
+
+.footer {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    background: white;
+    color: rgb(109, 67, 0);
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 884px) {
+    .footer {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+}
+
+/* Chart Box css */
+#chartBox {
+    display: flex;
+    align-items: center; /* Center align the heading */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+/* Ensure proper positioning for the Soft Skills heading */
+#soft-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the heading */
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#soft-skills h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center; /* Ensures the heading is centered */
+    width: 100%; /* Prevents layout issues */
+}
+
+#soft-skills .soft-skills-description {
+    font-size: 1.2rem; /* Adjust font size for readability */
+    text-align: center; /* Center-align the text */
+    color: #555; /* Use a slightly lighter color for distinction */
+}
+
+
+/* Table Styling */
+.table-container {
+    width: 85%; /* Adjusts the overall width of the table's container */
+    max-width: 850px; /* Optional: Limits the maximum width of the table */
+    overflow-x: auto;
+    margin: 0 auto; /* Centers the table */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #cbc5c5;
+}
+
+th {
+    background-color: rgb(109, 67, 0);
+    color: white;
+    font-size: 1.2rem;
+}
+
+td {
+    font-size: 1rem;
+    color: #555;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Space between items */
+    max-width: px; /* Adjust to your desired width */
+    margin: 0 auto; /* Center the wrapper */
+  }
+.wrtitle h2{
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center; /* Ensures the heading is centered */
+    width: 100%; /* Prevents layout issues */
+}  
+  .wrapper .card {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  .wrapper .card .circle{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    cursor: default;
+  }
+  .card .circle .box,
+  .card .circle .box span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .card .circle .box{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: all 0.2s;
+  }
+  .card .circle:hover .box{
+    transform: translate(-50%, -50%) scale(0.91);
+  }
+  .card .circle .box span,
+  .wrapper .card .text{
+    background: #333;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+  }
+  .circle .box span{
+    font-size:38px;
+    font-weight: 600;
+    transform:translate(-45%,-45%);
+    transition:all 0.1s;
+  }
+  .card .circle:hover .box span{
+    transform:translate(-45%,-45%) scale(1.09);
+  }
+  .card .text{
+    font-size:20px;
+    font-weight:600;
+  }
+  @media (max-width:753px){
+    .wrapper{
+      max-width:700px;
+    }
+    .wrapper .card{
+      width:calc(50% - 20px);
+      margin-bottom:20px;
+    }
+  }
+  @media (max-width:505px){
+    .wrapper{
+      max-width:500px;
+    }
+    .wrapper .card{
+      width:100%;
+    }
+  }
+
+  .skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+}
+.section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.SBtitle h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center; /* Ensures the heading is centered */
+    width: 100%; /* Prevents layout issues */
+}
+.skill-name{
+    color: #555;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+.skill-bar{
+    height: 20px;
+    background: #e4e4e4;
+    border-radius: 8px;
+}
+.skill-per {
+    height: 20px;
+    background: linear-gradient(to right,  rgb(254, 215, 173),rgb(109, 67, 0));
+    border-radius: 8px;
+    width: 0;
+    transition: 1s linear;
+    position: relative;
+}
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+.skill-per::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 2px;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+}
